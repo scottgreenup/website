@@ -8,21 +8,31 @@ aside#certs {
     padding: 0 50px;
 }
 
-aside#certs p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 200;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  margin-top: 3px;
-}
-
-aside#certs h4 {
+aside#certs> .experience #company {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1em;
   line-height: 1em;
   margin: 0;
   padding: 0;
+}
+
+aside#certs> .experience #role {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 200;
+  line-height: 1.2em;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+aside#certs> .experience #period {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin-top: 3px;
 }
 
 section#about {
@@ -160,3 +170,5 @@ aside#certs h1 {
     text-align: left;
   }
 }
+
+
