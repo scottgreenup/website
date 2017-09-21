@@ -1,0 +1,223 @@
+.content {
+  display: block;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  color: #808080;
+  transition: color 0.3s ease 0s;
+  text-decoration: none;
+  border-bottom: 1px dotted #CCC;
+}
+
+a:hover {
+  color: #38F;
+  border-bottom: 1px solid #00F;
+}
+
+article {
+  border: 1px solid #DDD;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Body ***********************************************************************/
+body {
+  background-color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.375em;
+}
+
+@media only screen and (max-device-width: 768px) {
+  body {
+    line-height: 1.25em;
+  }
+}
+
+/* Headings *******************************************************************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.05em;
+}
+
+h1#blogtitle {
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1#blogtitle:hover {
+  color: #555555;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 2.1em;
+  font-weight: 600;
+  line-height: 1.15em;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 600;
+  line-height: 1.25em;
+}
+
+h4 {
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.222em;
+}
+
+h5#timestamp {
+  color: #777;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  line-height: 1.222em;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-device-width: 768px) {
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+
+  h2 {
+    font-size: 1.625em;
+    line-height: 1.153em;
+  }
+
+  h3 {
+    font-size: 1.375em;
+    line-height: 1.136em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.111em;
+  }
+}
+
+/* Footer *********************************************************************/
+footer {
+  background-color: #FFF;
+  display: block;
+  float: left;
+  margin: 100px 0 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+div#copyright {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+div#copyright p {
+  color: #555;
+  font-size: 0.8em;
+  margin: 0;
+  text-align: center;
+}
+
+div#copyright p a {
+  border: none;
+}
+
+footer a {
+  color: #888;
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 20px;
+  border:none;
+}
+
+footer a:hover {
+  font-size: 24px;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 20px;
+  border:none;
+}
+
+@media only screen and (min-width: 768px) {
+  footer a {
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-device-width: 768px) {
+  footer a {
+    display: inline-block;
+  }
+}
+
+pre {
+  background: #FDF6E3;
+  border: 1px dashed black;
+  color: #002B36;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 95%;
+  line-height: 140%;
+  padding: 5px;
+  tab-size: 4;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+code {
+  background: #FDF6E3;
+  color: #002B36;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+#content code {
+  border: 1px solid #bebab0;
+  padding: 0.5em 1em;
+  display: block;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #909090;
+  clear: both;
+  display: block;
+  height: 0;
+  margin: 0 auto 50px auto;
+  padding-top: 50px;
+  max-width: 320px;
+  width: 100%;
+}

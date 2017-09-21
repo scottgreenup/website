@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="intro">
+
+  <nav>
+    <a href="/about">About Me</a>
+    <a href="/blog">Blog</a>
+  </nav>
+
+  <h1>Scott Greenup</h1>
+  <h2>Software Developer</h2>
+
+  <table>
+    <tr>
+      <td><img src="/static/img/icon/browser.png" /></td>
+      <td><img src="/static/img/icon/technology.png" /></td>
+      <td><img src="/static/img/icon/game-controller.png" /></td>
+      <td><img src="/static/img/icon/security.png" /></td>
+      <td><img src="/static/img/icon/worldwide.png" /></td>
+    </tr>
+    <tr>
+      <td><h3>Web Dev</h3></td>
+      <td><h3>Systems Dev</h3></td>
+      <td><h3>Games Dev</h3></td>
+      <td><h3>Security</h3></td>
+      <td><h3>Traveller</h3></td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    var node = document.getElementsByTagName("header")[0];
+    node.parentNode.removeChild(node);
+  </script>
+
+
+</div>
+{% endblock %}
