@@ -8,7 +8,7 @@ aside#certs {
     padding: 0 50px;
 }
 
-aside#certs> .experience #company {
+aside#certs .experience #company {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1em;
@@ -17,7 +17,7 @@ aside#certs> .experience #company {
   padding: 0;
 }
 
-aside#certs> .experience #role {
+aside#certs .experience #role {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   font-style: italic;
@@ -27,13 +27,22 @@ aside#certs> .experience #role {
   margin-bottom: 3px;
 }
 
-aside#certs> .experience #period {
+aside#certs .experience #period {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
   font-size: 0.9em;
   line-height: 1.2em;
   margin-top: 3px;
 }
+
+aside#certs h1 {
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
 
 section#about {
   -webkit-box-sizing: border-box;
@@ -44,16 +53,13 @@ section#about {
 section#about p, li {
   font-weight: 300;
   font-size: 1em;
-}
-
-aside#certs h1 {
-  text-align: left;
+  text-align: justify;
 }
 
 
 @media only screen {
   aside#certs {
-    border-left: 1px solid #999;
+    border-left: 0px solid #999;
     display: inline-block;
     float: inherit;
     width: 39%;
