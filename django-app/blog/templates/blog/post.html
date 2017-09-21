@@ -1,0 +1,13 @@
+
+{% if post %}
+<h1>{{post.title}}</h1>
+<h3>{{post.author}}</h3>
+<p>Created {{post.created_at}}, updated {{post.updated_at}}</p>
+
+{{post.content}}
+
+{% else %}
+
+Post does not exist.
+
+{% endif %}
