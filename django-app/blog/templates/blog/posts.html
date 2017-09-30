@@ -1,11 +1,21 @@
 
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content">
 {% if posts %}
-<ul>
 {% for post in posts %}
-  <li><a href="/blog/{{ post.title }}/">{{ post.title }}</a>
+<a href="/blog/{{ post.title }}/">
+<div>
+  <h1>{{ post.title }}</h1>
+  <h4>{{ post.created_at }}</h4>
+</div>
+</a>
 {% endfor %}
-<ul>
 
 {% else %}
 <p>No posts were found.</p>
 {% endif %}
+</div>
+
+{% endblock %}
