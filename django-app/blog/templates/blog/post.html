@@ -3,18 +3,24 @@
 {% block content %}
 
 <div class="content">
-{% if post %}
-<h1>{{post.title}}</h1>
-<h5>{{post.created_at}}</h2>
-<br />
-<h5>Posted by {{post.author}}</h3>
+  <section class="full">
+    <article>
+      {% if post %}
+      <a href="/blog/{{ post.title }}/">
+        <h1>{{ post.title }}</h1>
+      </a>
 
-{{post.content}}
+      <h6>Published {{ post.created_at }}</h6>
+      <h5>Posted by {{post.author}}</h5>
 
-{% else %}
-Post does not exist.
-{% endif %}
+      {{ post.content|safe }}
 
+      {% else %}
+      <p>Post does not exist.</p>
+      {% endif %}
+    </article>
+
+  </section>
 </div>
 
 {% endblock %}

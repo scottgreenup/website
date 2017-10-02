@@ -1,15 +1,19 @@
 .content {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 960px;
 }
 
 p {
   font-size: 1em;
 }
 
-a {
+p a {
   color: #808080;
+}
+
+a {
+  color: #000;
   transition: color 0.3s ease 0s;
   text-decoration: none;
   border-bottom: 1px dotted #CCC;
@@ -18,14 +22,6 @@ a {
 a:hover {
   color: #38F;
   border-bottom: 1px solid #00F;
-}
-
-article {
-  border: 1px solid #DDD;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 
 /* Body ***********************************************************************/
@@ -48,7 +44,7 @@ body {
 /* Headings *******************************************************************/
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.05em;
 }
 
@@ -57,42 +53,37 @@ h1 {
   line-height: 1.05em;
 }
 
-h1#blogtitle {
-  color: black;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-h1#blogtitle:hover {
-  color: #555555;
-  text-decoration: underline;
-}
-
-h2 {
+h1 {
   font-size: 2.1em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15em;
 }
 
-h3 {
+h2 {
   font-size: 1.75em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25em;
 }
 
-h4 {
+h3 {
   font-size: 1.125em;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.222em;
 }
 
-h5#timestamp {
-  color: #777;
+article h1 {
+  margin-bottom: 0.3em;
+  padding-bottom: 0;
+}
+
+article h6 {
+  color: #707070;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.8em;
+  font-size: 1.0em;
   font-weight: 300;
   line-height: 1.222em;
   margin: 0;
+  margin-bottom: 1em;
   padding: 0;
 }
 
@@ -177,42 +168,9 @@ footer a:hover {
   }
 }
 
-pre {
-  background: #FDF6E3;
-  border: 1px dashed black;
-  color: #002B36;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 95%;
-  line-height: 140%;
-  padding: 5px;
-  tab-size: 4;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
-}
-
-code {
-  background: #FDF6E3;
-  color: #002B36;
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 95%;
-  line-height: 140%;
-  white-space: pre;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -o-pre-wrap;
-}
-
-#content code {
-  border: 1px solid #bebab0;
-  padding: 0.5em 1em;
-  display: block;
-}
-
 hr {
   border: 0;
-  border-bottom: 1px solid #909090;
+  border-bottom: 1px solid #E7E7E7;
   clear: both;
   display: block;
   height: 0;
@@ -286,19 +244,18 @@ nav > a:hover {
 }
 
 /******************************************************************************
- * about.css
+ * Aside
  ******************************************************************************/
 
-aside#certs {
+aside {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-    margin-top: 50px;
-    margin-bottom: 0px;
-    padding: 0 50px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 30px;
 }
 
-aside#certs .experience #company {
+aside .experience #company {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1em;
@@ -307,7 +264,7 @@ aside#certs .experience #company {
   padding: 0;
 }
 
-aside#certs .experience #role {
+aside .experience #role {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   font-style: italic;
@@ -317,7 +274,7 @@ aside#certs .experience #role {
   margin-bottom: 3px;
 }
 
-aside#certs .experience #period {
+aside .experience #period {
   font-family: 'Open Sans', sans-serif;
   font-weight: 200;
   font-size: 0.9em;
@@ -325,22 +282,14 @@ aside#certs .experience #period {
   margin-top: 3px;
 }
 
-aside#certs h1 {
-  text-align: left;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 1.75em;
-  line-height: 1.25em;
-}
 
-
-section#about {
+section {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-section#about p, li {
+section p, li {
   font-weight: 300;
   font-size: 1em;
   text-align: justify;
@@ -348,49 +297,32 @@ section#about p, li {
 
 
 @media only screen {
-  aside#certs {
+  aside {
     border-left: 0px solid #999;
     display: inline-block;
     float: inherit;
-    width: 39%;
+    width: 34%;
   }
 
-  section#about {
+  section {
     display: inline-block;
     float: left;
-    margin: 0px 0px;
-    padding: 50px 30px 50px 50px;
-    width: 60%;
+    margin: 0 0 0 0;
+    padding: 0 30px 0 30px;
+    width: 65%;
   }
 
-  aside#certs h1 {
-    text-align: left;
-  }
-
-  aside#certs h4 {
-    text-align: left;
-  }
-
-  aside#certs p {
-    text-align: left;
-  }
-
-  section h1,
-  section h2,
-  section h3,
-  section h4,
-  section h5,
-  section h6 {
-    text-align: left;
-  }
-
-  p {
-    text-align: left;
+  section.full {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  aside#certs {
+  aside {
     border-left: none;
     display: block;
     float: left;
@@ -398,38 +330,28 @@ section#about p, li {
     margin-top: 0;
   }
 
-  section#about {
+  section {
     display: block;
     float: left;
-    margin-top: 50px;
-    margin-bottom: 0;
+    margin: 0px 0 0 0;
     padding: 0px 50px;
     width: 100%;
   }
 
-  aside#certs h1 {
-    text-align: center;
+  section.full {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 768px;
   }
 
-  aside#certs h4 {
+  h1, h2, h3, h4, h5, h6, p {
     text-align: center;
-  }
-
-  aside#certs p {
-    text-align: center;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-  }
-
-  p {
-    text-align: left;
   }
 }
 
 @media only screen and (max-device-width: 768px) {
-  aside#certs {
+  aside {
     border-left: none;
     display: block;
     float: left;
@@ -437,7 +359,7 @@ section#about p, li {
     margin-top: 0;
   }
 
-  section#about {
+  section {
     display: block;
     float: left;
     margin-top: 50px;
@@ -446,15 +368,7 @@ section#about p, li {
     width: 100%;
   }
 
-  aside#certs h1 {
-    text-align: center;
-  }
-
-  aside#certs h4 {
-    text-align: center;
-  }
-
-  aside#certs p {
+  aside p {
     text-align: center;
   }
 
@@ -467,4 +381,8 @@ section#about p, li {
   }
 }
 
+
+article p {
+  text-align: left;
+}
 

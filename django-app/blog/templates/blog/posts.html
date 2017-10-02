@@ -2,22 +2,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="content" id="aboutme">
-{% if posts %}
-{% for post in posts %}
-<div>
-<a href="/blog/{{ post.title }}/">
-  <h1>{{ post.title }}</h1>
-</a>
-  <h5>{{ post.created_at }}</h5>
+<div class="content">
+  <section class="full">
+    {% for post in posts %}
 
-  {{post.content}}
-</div>
-{% endfor %}
+    <article>
+      <a href="/blog/{{ post.title }}/">
+        <h1>{{ post.title }}</h1>
+      </a>
 
-{% else %}
-<p>No posts were found.</p>
-{% endif %}
+      <h6>{{ post.created_at }}</h6>
+
+      {{ post.content|safe|escape }}
+    </article>
+
+    <hr />
+
+    {% endfor %}
+  </section>
 </div>
 
 {% endblock %}
