@@ -1,13 +1,26 @@
 
-{% if post %}
-<h1>{{post.title}}</h1>
-<h3>{{post.author}}</h3>
-<p>Created {{post.created_at}}, updated {{post.updated_at}}</p>
+{% extends "base.html" %}
+{% block content %}
 
-{{post.content}}
+<div class="content">
+  <section class="full">
+    <article>
+      {% if post %}
+      <a href="/blog/{{ post.title }}/">
+        <h1>{{ post.title }}</h1>
+      </a>
 
-{% else %}
+      <h6>Published {{ post.created_at }}</h6>
+      <h5>Posted by {{post.author}}</h5>
 
-Post does not exist.
+      {{ post.content|safe }}
 
-{% endif %}
+      {% else %}
+      <p>Post does not exist.</p>
+      {% endif %}
+    </article>
+
+  </section>
+</div>
+
+{% endblock %}

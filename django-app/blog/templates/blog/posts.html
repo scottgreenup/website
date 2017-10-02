@@ -3,19 +3,23 @@
 {% block content %}
 
 <div class="content">
-{% if posts %}
-{% for post in posts %}
-<a href="/blog/{{ post.title }}/">
-<div>
-  <h1>{{ post.title }}</h1>
-  <h4>{{ post.created_at }}</h4>
-</div>
-</a>
-{% endfor %}
+  <section class="full">
+    {% for post in posts %}
 
-{% else %}
-<p>No posts were found.</p>
-{% endif %}
+    <article>
+      <a href="/blog/{{ post.title }}/">
+        <h1>{{ post.title }}</h1>
+      </a>
+
+      <h6>{{ post.created_at }}</h6>
+
+      {{ post.content|safe|escape }}
+    </article>
+
+    <hr />
+
+    {% endfor %}
+  </section>
 </div>
 
 {% endblock %}
