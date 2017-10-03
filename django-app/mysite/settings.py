@@ -19,9 +19,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
+flag = {'True': True, 'False': False}
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DEBUG', False))
+DEBUG = flag.get(os.environ.get('DEBUG', 'False'), False)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 if 'SECRET_KEY' in os.environ:
@@ -35,6 +36,7 @@ else:
 ALLOWED_HOSTS = ['.scottgreenup.com', 'localhost']
 
 if not DEBUG:
+    STATIC_ROOT = '/public/static'
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
 
