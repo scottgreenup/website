@@ -19,14 +19,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%3x9=+z^bt)@&c=1n5_5w&kdg28#h%@$%4qu=q!n#pgu*4^4_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DEBUG', False))
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: keep the secret key used in production secret!
+if 'SECRET_KEY' in os.environ:
+    with open(os.environ['SECRET_KEY']) as f:
+        SECRET_KEY = f.read().strip()
+elif DEBUG is True:
+    SECRET_KEY = '%3x9=+z^bt)@&c=1n5_5w&kdg28#h%@$%4qu=q!n#pgu*4^4_g'
+else:
+    raise Exception("No SECRET_KEY provided.")
 
+ALLOWED_HOSTS = ['.scottgreenup.com', 'localhost']
+
+if not DEBUG:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -126,7 +136,7 @@ STATIC_URL = '/static/'
 # Django Suit configuration example
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': 'Token Service',
+    'ADMIN_NAME': 'Scott Greenup Site',
     # 'HEADER_DATE_FORMAT': 'l, j. F Y',
     # 'HEADER_TIME_FORMAT': 'H:i',
 
